@@ -1,0 +1,274 @@
+/* ===========================
+        HEADER
+=========================== */
+
+body{
+    background:#f5f5f5;
+}
+
+/* Header */
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:85px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 8%;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(18px);
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    z-index:1000;
+    
+}
+
+/* Logo */
+
+.logo img{
+    width:220px;
+    display:block;
+}
+
+/* Navigation */
+
+nav{
+    display:flex;
+    align-items:center;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:35px;
+    list-style:none;
+}
+
+.nav-links li{
+    list-style:none;
+}
+
+.nav-links li a{
+    text-decoration:none;
+    color:#555;
+    font-size:16px;
+    font-weight:500;
+    position:relative;
+    transition:.3s ease;
+}
+
+/* Underline */
+
+.nav-links li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-8px;
+
+    transform:translateX(-50%);
+
+    width:0;
+
+    height:2px;
+
+    background:#ce1212;
+
+    transition:.3s;
+
+}
+
+/* Hover */
+
+.nav-links li a:hover{
+
+    color:#ce1212;
+
+}
+
+.nav-links li a:hover::after{
+
+    width:100%;
+
+}
+
+/* Active Route */
+
+.nav-links li a.active{
+
+    color:#ce1212;
+
+}
+
+.nav-links li a.active::after{
+
+    width:100%;
+
+}
+
+/* Button */
+
+.book-btn{
+
+    padding: 28px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#ce1212;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.4s;
+    
+    text-decoration: none;
+
+}
+
+.book-btn:hover{
+
+    transform:translateY(-4px);
+
+    background:#a80d0d;
+
+    box-shadow:0 15px 35px rgba(206,18,18,.35);
+
+    text-decoration: none;
+
+}
+
+/* Remove Link Underline */
+
+.header a{
+
+    text-decoration:none;
+
+}
+
+/* Menu Icon */
+
+.menu-icon{
+
+    display:none;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    color:#222;
+
+}
+
+/* ===========================
+      Mobile (320px-480px)
+=========================== */
+
+/* ================= MOBILE ================= */
+
+@media (max-width:480px){
+
+.header{
+    height:70px;
+    padding:0 16px;
+    justify-content:space-between;
+}
+
+.logo img{
+    width:140px;
+    margin:0;
+}
+
+/* Hide desktop button */
+
+.book-btn{
+    display:none;
+}
+
+/* Navigation */
+
+.nav-links{
+    position:fixed;
+    top:70px;
+    right:-100%;
+    width:75%;
+    max-width:280px;
+    height:calc(100vh - 70px);
+    background:#fff;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:22px;
+    padding:35px 20px;
+    transition:.35s ease;
+    box-shadow:-5px 0 20px rgba(0,0,0,.15);
+    overflow-y:auto;
+    z-index:999;
+}
+
+.nav-links.active{
+
+    right:0;
+
+
+   
+
+
+
+}
+
+.nav-links li{
+    width:100%;
+}
+
+.nav-links li a{
+    display:block;
+    width:100%;
+    font-size:17px;
+    padding:8px 0;
+}
+
+.menu-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+    color:#222;
+    cursor:pointer;
+    z-index:1001;
+
+    font-size:15px;
+
+}
+
+.menu-icon{
+
+    display:block;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    z-index:2000;
+    
+   margin-right: auto;
+   
+
+     
+
+}
+
+
+
+}

@@ -1,0 +1,138 @@
+/* ===========================
+   STATS SECTION
+=========================== */
+
+.stats-section{
+    width:100%;
+    height:420px;
+    background:url("../assets/statsimg.jpg") center/cover no-repeat;
+    position:relative;
+    background-attachment:fixed;
+}
+
+/* Dark Overlay */
+
+.overlay{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.55);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Container */
+
+.stats-container{
+    width:85%;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
+}
+
+/* Counter Card */
+.stat-box{
+
+    text-align:center;
+
+    color:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    backdrop-filter:blur(10px);
+
+    background:rgba(255,255,255,.05);
+
+    transition:.4s;
+
+}
+
+.stat-box:hover{
+
+    transform:translateY(-10px);
+
+    background:rgba(255,255,255,.12);
+
+}
+/* Number */
+.stat-box h2{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+/* Text */
+
+.stat-box p{
+    font-size:22px;
+    color:#ddd;
+    font-weight:500;
+}
+
+/* Divider */
+
+.stat-box:not(:last-child){
+    border-right:1px solid rgba(255,255,255,.2);
+}
+
+
+/*==================================
+    Mobile View (320px - 480px)
+===================================*/
+
+@media screen and (min-width:320px) and (max-width:480px){
+
+.stats-section{
+    height:auto;
+    background-position:center;
+    background-size:cover;
+    background-attachment:scroll;
+}
+
+.overlay{
+    padding:60px 20px;
+}
+
+.stats-container{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.stat-box{
+    padding:25px 15px;
+    border-radius:15px;
+    border-right:none !important;
+}
+
+.stat-box h2{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.stat-box p{
+    font-size:16px;
+    line-height:1.5;
+}
+
+}
