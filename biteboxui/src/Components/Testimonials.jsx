@@ -34,7 +34,7 @@ function Testimonials() {
         modules={[Pagination, Autoplay]}
         slidesPerView={1}
         spaceBetween={30}
-        loop={true}
+        loop={false}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,

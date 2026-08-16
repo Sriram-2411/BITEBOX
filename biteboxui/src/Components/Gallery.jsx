@@ -29,7 +29,7 @@ function Gallery() {
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={"auto"}
-        loop={true}
+        loop={false}
         autoplay={{
           delay:2500,
           disableOnInteraction:false

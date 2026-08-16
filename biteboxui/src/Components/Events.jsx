@@ -19,7 +19,7 @@ function Events() {
       <Swiper
         modules={[Autoplay, Pagination]}
         slidesPerView={1}
-        loop={true}
+        loop={false}
         autoplay={{
           delay:4000,
           disableOnInteraction:false
